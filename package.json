@@ -1,0 +1,14 @@
+{
+  "name": "reddit-clone",
+  "version": "1.0.0",
+  "description": "Reddit Clone",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Zach & Divyesh",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}

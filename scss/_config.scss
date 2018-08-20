@@ -1,0 +1,16 @@
+$primary-color: #333;
+$secondary-color: #ee1e1e;
+$background-color: rgba(252, 214, 214, 0.788);
+
+@mixin easeOut {
+   transition: all 0.5s ease-out;
+ }
+
+ // Set Text Color
+@function set-text-color($color) {
+   @if (lightness($color) > 40) {
+     @return #000;
+   } @else {
+     @return #fff;
+   }
+ }

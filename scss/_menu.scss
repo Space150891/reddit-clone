@@ -1,0 +1,59 @@
+.menu-btn {
+   position: absolute;
+   z-index: 3;
+   left: 35px;
+   top: 35px;
+   cursor: pointer;
+   @include easeOut;
+
+   .btn-line {
+      width: 28px;
+      height: 3px;
+      margin-bottom: 5px;
+      background: set-text-color($primary-color);
+      @include easeOut;
+   }
+
+   // Rotate Into X with menu lines
+  &.close {
+   transform: rotate(180deg);
+
+   .btn-line {
+      &:nth-child(1) {
+         transform: rotate(45deg) translate(5px, 5px);
+      }
+      &:nth-child(2) {
+         visibility: hidden;
+      }
+      &:nth-child(3) {
+         transform: rotate(-45deg) translate(7px, -5px);
+      }
+   }
+  }
+}
+
+.menu {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   visibility: hidden;
+
+   &.show {
+      visibility: visible;
+   }
+
+   &-nav {
+      margin: 0;
+      padding: 0;
+      background: darken($primary-color, 5);
+      list-style: none;
+      transform: translate3d(0, -100%, 0);
+      @include easeOut;
+      &.show {
+         // Slide in from Top
+         transform: translate3d(0, 0, 0);
+       }
+   }
+
+
+}
